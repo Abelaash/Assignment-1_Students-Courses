@@ -1,0 +1,29 @@
+extends layout 
+
+block content 
+    h1 Student 
+    each value, key in students 
+        if key === 'id'
+            h3 ID: #{value}
+        if key === 'name'
+            h4 Name: #{value}
+        if key === 'department'
+            h4 Department: #{value}
+        if key === 'semester'
+            h4 Semester: #{value}
+        if key === 'coursesCompleted'
+            each object in value
+                br
+                if object    
+                    each value, key in object
+                        if key === 'id'
+                            h3 ID: #{value}
+                        if key === 'name'
+                            h5 Name: #{value}
+                        if key === 'department'
+                            h5 Department: #{value}
+                        if key === 'description'
+                            h5 Description: #{value}
+                        if key === 'gradeAchieved'
+                            h5 Your Grade: #{value}%
+    h4 Average Grade: #{grade}%

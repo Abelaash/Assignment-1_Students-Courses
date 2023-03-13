@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1 Filter Courses
+  ul
+    each c in course
+      each value, key in c
+        if key === 'id'
+            h3 Id: #{value}
+        if key === 'name'
+            h4 Name: #{value}
+        if key === 'department'
+            h4 Department: #{value}
+        if key === 'description'
+            h4 Description: #{value}
+        if key === 'seats'
+            h4 Seats: #{value}
+    

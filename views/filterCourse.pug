@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    h1 Filter Courses
+    form(method='post' action='/course/filter')
+        h3 id
+        input(type='text'
+        name='id')
+        br
+
+        h3 name 
+        input(type='text'
+        name='name')
+        br
+
+        h3 department
+        input(type='text'
+        name='section')
+        br
+
+        h3 is open?
+        input(type='checkbox'
+        name='checkbox')
+        br
+        br
+        input(type='submit' value='Submit')

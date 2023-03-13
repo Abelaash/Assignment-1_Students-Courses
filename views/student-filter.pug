@@ -1,0 +1,51 @@
+extends layout 
+
+block content 
+  h1 Students 
+  each student in stu 
+    h2 Students: 
+    br
+    each value, key in student 
+      if key === 'id'
+        h3 ID: #{value}
+      if key === 'name' 
+        h4 Name: #{value}
+      if key === 'department'
+        h4 Department: #{value}
+      if key === 'semester'
+        h4 Semester: #{value}
+        br
+      if key === 'coursesEnrolled'
+        h2 Courses Enrolled 
+
+        each object in value 
+          br
+          if object 
+            each value, key in object
+              if key === 'id'
+                h4 ID: #{value}
+              if key === 'name'
+                h5 Name: #{value}
+              if key === 'department'
+                h5 Department: #{value}
+              if key === 'description'
+                h5 Description: #{value}
+              if key === 'seats'
+                h5 Seats: #{value}
+          br
+        if key === 'coursesCompleted'
+          h2 Courses Completed 
+          each object in value 
+            br
+            each value, key in object 
+              if key === 'id'
+                h4 ID: #{value}
+              if key === 'name'
+                h5 Name: #{value}
+              if key === 'department'
+                h5 Department: #{value}
+              if key === 'description'
+                h5 Description: #{value}
+              if key === 'gradeAchieved'
+                h5 Grade #{value}%
+        p -----------------------------------------------------

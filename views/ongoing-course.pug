@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1 OnGoing Courses
+    each cl in modules 
+        each value, key in cl
+            if key === 'id'
+                h4 Id: #{value}
+            if key === 'name'
+                h5 Name: #{value}
+            if key === 'department'
+                h5 Department: #{value}
+            if key === 'description'
+                h5 Description: #{value}
+            if key === 'seats'
+                h5 Seats: #{value}
+        p -----------------------------------------------

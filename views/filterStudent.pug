@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    h1 Filter Students
+    form(method='post' action='/student/filter')
+        h3 id
+        input(type='text'
+        name='id')
+        br
+
+        h3 name 
+        input(type='text'
+        name='name')
+        br
+
+        h3 department
+        input(type='text'
+        name='section')
+        br
+
+        h3 Enrolled Course
+        input(type='text'
+        name='enroll')
+        br
+
+        h3 Completed Course
+        input(type='text'
+        name='complete')
+        br
+        br
+        input(type='submit' value='Submit')
